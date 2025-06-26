@@ -26,4 +26,5 @@ jobs:
             cd ${{ secrets.APP_DIR }}
             npm install
             pm2 restart all || pm2 start src/server.js --name login-app
+            npm test
           EOF

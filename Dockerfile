@@ -8,8 +8,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+#Install dependencies
+RUN npm install -g nodemon
+
 COPY . .
 
 # Expose and run
 EXPOSE 3000
-CMD ["node", "src/server.js"]
+CMD ["node", "run","dev"]
